@@ -2,7 +2,7 @@
   "name": "sumcheck-builders-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://polyhedrazk.github.io/sumcheck-builders",
+  "homepage": "https://sumcheck-builders.polyhedra.network",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
