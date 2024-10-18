@@ -84,6 +84,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .main-nav a i {
@@ -219,7 +220,7 @@ a:hover {
 .site-footer {
   background-color: var(--secondary-color);
   color: #fff;
-  padding: 30px 0;
+  padding: 30px 0; /* Increased padding */
   margin-top: 60px;
 }
 
@@ -232,13 +233,19 @@ a:hover {
   align-items: center;
 }
 
-.footer-left, .footer-center, .footer-right {
+.footer-left, .footer-right {
   flex: 1;
-  text-align: center;
 }
 
 .footer-left {
-  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+  filter: brightness(0) invert(1); /* This will make the logo white for better contrast */
 }
 
 .footer-right {
@@ -251,13 +258,13 @@ a:hover {
   gap: 20px;
 }
 
-.footer-nav a, .footer-center a {
+.footer-nav a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.footer-nav a:hover, .footer-center a:hover {
+.footer-nav a:hover {
   color: var(--accent-color);
 }
 
@@ -293,10 +300,11 @@ a:hover {
 
   .footer-content {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
-  .footer-left, .footer-center, .footer-right {
+  .footer-left, .footer-right {
+    text-align: center;
     margin-bottom: 20px;
   }
 
@@ -304,7 +312,7 @@ a:hover {
     justify-content: center;
   }
 
-  .footer-left, .footer-right {
-    text-align: center;
+  .footer-logo {
+    margin-bottom: 20px;
   }
 }
