@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sumcheck-builders/static/css/main.c1e3710a.css",
-    "main.js": "/sumcheck-builders/static/js/main.eaa5cafb.js",
+    "main.js": "/sumcheck-builders/static/js/main.328a93c1.js",
     "static/js/453.30edf3af.chunk.js": "/sumcheck-builders/static/js/453.30edf3af.chunk.js",
     "index.html": "/sumcheck-builders/index.html",
     "main.c1e3710a.css.map": "/sumcheck-builders/static/css/main.c1e3710a.css.map",
-    "main.eaa5cafb.js.map": "/sumcheck-builders/static/js/main.eaa5cafb.js.map",
+    "main.328a93c1.js.map": "/sumcheck-builders/static/js/main.328a93c1.js.map",
     "453.30edf3af.chunk.js.map": "/sumcheck-builders/static/js/453.30edf3af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1e3710a.css",
-    "static/js/main.eaa5cafb.js"
+    "static/js/main.328a93c1.js"
   ]
 }
