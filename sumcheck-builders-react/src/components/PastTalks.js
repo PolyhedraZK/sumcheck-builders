@@ -10,14 +10,14 @@ const PastTalks = () => {
             speaker: "Simon Lau from Polyhdera Network",
             topic: "Accelerating SumChecks using GPUs, comparing CUDA and Triton frameworks",
             date: "Friday, October 18, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
-            recording: "Recording not yet available"
+            recording: <><a href="https://drive.google.com/file/d/13S6VBNYP0g_9Asq7aPQ3S4g3qcAn7FSW/view?usp=sharing">Recording</a></>,
+            slides: <a href="https://docs.google.com/presentation/d/1ODt7MskLz_REANl4yBuSSqEts3aHf3xfHYZRGjCPYLs/edit#slide=id.p">Slides</a>  
           },
           {
             speaker: "Giacomo Fenzi from EPFL",
             topic: <a href="https://eprint.iacr.org/2024/390">STIR: Reed–Solomon Proximity Testing with Fewer Queries</a>,
             date: "Wednesday, Oct 16, 11:00 AM PST / 2:00 PM EST / 8:00 PM CET",
-            recording: "Recording not yet available",
-            slides: <a href="https://hackmd.io/@gfenzi/STIR">Slides</a>
+            recording: <><a href="https://www.youtube.com/watch?v=wYUnwLv-5Sg">Recording</a></>   
           },
           {
             speaker: "Vishruti from Modulus Labs",
