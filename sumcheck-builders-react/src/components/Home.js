@@ -28,7 +28,6 @@ const Questionnaire = ({ onComplete }) => {
         </p>
         <p>
           If you prefer to skip this step and obtain the invite link directly, please contact us via the link at the bottom of the page.
-          // the link at the bottom of the page is infact the telegram invite link
         </p>
       </div>
       <h3>Please answer this question to join our community:</h3>
@@ -36,7 +35,6 @@ const Questionnaire = ({ onComplete }) => {
         <div>
           <label htmlFor="question">
             Suppose we have an MLE whose lookup table is `(1, 2, 3, 4)`. What is its evaluation over a point `(5,6)`?
-            // the answer is either 17 or 18, depending on the endieness of the point.
           </label>
           <input
             type="text"
