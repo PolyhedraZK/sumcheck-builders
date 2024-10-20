@@ -1,68 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import UpcomingTalks from './UpcomingTalks';
-
-const Questionnaire = ({ onComplete }) => {
-  const [answer, setAnswer] = useState('');
-  const [error, setError] = useState('');
-
-  const handleInputChange = (e) => {
-    setAnswer(e.target.value);
-    setError('');
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (answer === '17' || answer === '18') {
-      onComplete(answer);
-    } else {
-      setError('Incorrect answer. Please try again.');
-    }
-  };
-
-  return (
-    <div className="questionnaire">
-      <div className="questionnaire-intro">
-        <p>
-          To maintain the quality of discussions in our community, we kindly ask you to answer a simple question.
-          This helps us ensure that our group consists of individuals genuinely interested in sum-check protocols and related topics.
-        </p>
-        <p>
-          If you prefer to skip this step and obtain the invite link directly, please contact us via the link at the bottom of the page.
-        </p>
-      </div>
-      <h3>Please answer this question to join our community:</h3>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="question">
-            Suppose we have an MLE whose lookup table is `(1, 2, 3, 4)`. What is its evaluation over a point `(5,6)`?
-          </label>
-          <input
-            type="text"
-            id="question"
-            name="question"
-            value={answer}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
-        {error && <p className="error">{error}</p>}
-        <button type="submit" className="btn">Submit</button>
-      </form>
-    </div>
-  );
-};
-
-
+import Questionnaire from './Questionnaire';
 
 const Home = () => {
-  const [showInvite, setShowInvite] = useState(false);
-
-  const handleQuestionnaireComplete = (answers) => {
-    // You can process the answers here if needed
-    console.log('Questionnaire answers:', answers);
-    setShowInvite(true);
-  };
-
   return (
     <div className="home-container">
       <div className="main-content">
@@ -78,13 +18,7 @@ const Home = () => {
           <p>
             Engage in academic discussions and stay updated on the latest developments in our vibrant community.
           </p>
-          {showInvite ? (
-            <a href="https://t.me/+mmG9soN2HpgyMGU5" target="_blank" rel="noopener noreferrer" className="btn">
-              Join Telegram Group
-            </a>
-          ) : (
-            <Questionnaire onComplete={handleQuestionnaireComplete} />
-          )}
+          <Questionnaire />
         </section>
 
         <section className="organizer-words">
