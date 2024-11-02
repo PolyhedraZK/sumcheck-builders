@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const PastTalks = () => {
   const talks = [
     {
       speaker: {
+        name: "Ron Rothblum",
+        personalWebsite: "https://csaws.cs.technion.ac.il/~rothblum/",
+        affiliation: {
+          name: "Succinct",
+          website: "https://succinct.xyz/"
+        }
+      },
+      topic: "Blaze: Fast SNARKs from Interleaved RAA Codes",
+      topicLink: "https://eprint.iacr.org/2024/1609",
+      date: "Friday, Nov 1, 11:00 AM PST / 2:00 PM EST / 8:00 PM CET",
+      recording: "https://zoom.us/rec/share/tjM6pBsi7pdkc-E7z1V9k_M9wZJP0bqeo4yrRPwcgL0x7CaDOJrwmQTFaxlaervg.OUD7XDL8e5jOnD8Z",
+      recordingPassword: "QLd!r0y6",
+      abstract: "In this work we construct a new and highly efficient multilinear polynomial commitment scheme (MLPCS) over binary fields, which we call Blaze. Polynomial commitment schemes allow a server to commit to a large polynomial and later decommit to its evaluations. Such schemes have emerged as a key component in recent efficient SNARK constructions.\n\nBlaze has an extremely efficient prover, both asymptotically and concretely. The commitment is dominated by 8n field additions (i.e., XORs) and one Merkle tree computation. The evaluation proof generation is dominated by 6n additions and 5n multiplications over the field. The verifier runs in time Oλ(log2⁡(n)). Concretely, for sufficiently large message sizes, the prover is faster than all prior schemes except for Brakedown (Golovnev et al., Crypto 2023), but offers significantly smaller proofs than the latter.\n\nThe scheme is obtained by combining two ingredients:\n\n1. Building on the code-switching technique (Ron-Zewi and Rothblum, JACM 2024), we show how to compose any error-correcting code together with an interactive oracle proof of proximity (IOPP) underlying existing MLPCS constructions, into a new MLPCS. The new MLPCS inherits its proving time from the code's encoding time, and its verification complexity from the underlying MLPCS. The composition is distinctive in that it is done purely on the information-theoretic side.\n\n2. We apply the above methodology using an extremely efficient error-correcting code known as the Repeat-Accumulate-Accumulate (RAA) code. We give new asymptotic and concrete bounds, which demonstrate that (for sufficiently large message sizes) this code has a better encoding time vs. distance tradeoff than previous linear-time encodable codes that were considered in the literature."
+    },
+    {
+      speaker: {
         name: "Simon Lau",
-        // personalWebsite: "https://simonlau.com",
         affiliation: {
           name: "Polyhdera Network",
           website: "https://www.polyhedra.network/"
@@ -62,7 +77,6 @@ const PastTalks = () => {
     {
       speaker: {
         name: "Lev Soukhanov",
-        // personalWebsite: "https://github.com/levs57",
         affiliation: {
           name: "Privacy Scaling Explorations",
           website: "https://pse.dev/"
@@ -90,6 +104,35 @@ const PastTalks = () => {
     }
   ];
 
+  const ToggleContent = ({ title, content }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    if (!content) return null;
+
+    const formatContent = (text) => {
+      const paragraphs = text.split('\n\n');
+      return paragraphs.map((paragraph, index) => (
+        <React.Fragment key={index}>
+          {paragraph}
+          {index < paragraphs.length - 1 && <><br /><br /></>}
+        </React.Fragment>
+      ));
+    };
+
+    return (
+      <div className="mt-2">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center text-blue-600 hover:text-blue-800"
+        >
+          <span className="font-semibold mr-2">{title}</span>
+          <span className="text-xs">{isOpen ? '▲' : '▼'}</span>
+        </button>
+        {isOpen && <p className="mt-2">{formatContent(content)}</p>}
+      </div>
+    );
+  };
+
   return (
     <div className="content">
       <h2 className="text-2xl font-bold mb-4">Past Talks</h2>
@@ -113,15 +156,18 @@ const PastTalks = () => {
               ) : talk.topic}
             </p>
             <p className="mb-2"><strong>Date:</strong> {talk.date}</p>
-            <p className="mb-2">
-              <strong>Recording:</strong> <a href={talk.recording} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
-              {talk.recordingPassword && ` (Password: ${talk.recordingPassword})`}
-            </p>
+            {talk.recording && (
+              <p className="mb-2">
+                <strong>Recording:</strong> <a href={talk.recording} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
+                {talk.recordingPassword && ` (Password: ${talk.recordingPassword})`}
+              </p>
+            )}
             {talk.slides && (
-              <p>
+              <p className="mb-2">
                 <strong>Slides:</strong> <a href={talk.slides} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
               </p>
             )}
+            <ToggleContent title="Abstract" content={talk.abstract} />
           </li>
         ))}
       </ul>
