@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const PastTalks = () => {
   const talks = [
@@ -102,6 +102,35 @@ const PastTalks = () => {
     }
   ];
 
+  const ToggleContent = ({ title, content }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    if (!content) return null;
+
+    const formatContent = (text) => {
+      const paragraphs = text.split('\n\n');
+      return paragraphs.map((paragraph, index) => (
+        <React.Fragment key={index}>
+          {paragraph}
+          {index < paragraphs.length - 1 && <><br /><br /></>}
+        </React.Fragment>
+      ));
+    };
+
+    return (
+      <div className="mt-2">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center text-blue-600 hover:text-blue-800"
+        >
+          <span className="font-semibold mr-2">{title}</span>
+          <span className="text-xs">{isOpen ? '▲' : '▼'}</span>
+        </button>
+        {isOpen && <p className="mt-2">{formatContent(content)}</p>}
+      </div>
+    );
+  };
+
   return (
     <div className="content">
       <h2 className="text-2xl font-bold mb-4">Past Talks</h2>
@@ -125,15 +154,18 @@ const PastTalks = () => {
               ) : talk.topic}
             </p>
             <p className="mb-2"><strong>Date:</strong> {talk.date}</p>
-            <p className="mb-2">
-              <strong>Recording:</strong> <a href={talk.recording} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
-              {talk.recordingPassword && ` (Password: ${talk.recordingPassword})`}
-            </p>
+            {talk.recording && (
+              <p className="mb-2">
+                <strong>Recording:</strong> <a href={talk.recording} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
+                {talk.recordingPassword && ` (Password: ${talk.recordingPassword})`}
+              </p>
+            )}
             {talk.slides && (
-              <p>
+              <p className="mb-2">
                 <strong>Slides:</strong> <a href={talk.slides} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
               </p>
             )}
+            <ToggleContent title="Abstract" content={talk.abstract} />
           </li>
         ))}
       </ul>
