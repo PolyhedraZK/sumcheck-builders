@@ -4,6 +4,22 @@ const PastTalks = () => {
   const talks = [
     {
       speaker: {
+        name: "Giacomo Fenzi",
+        personalWebsite: "https://gfenzi.io/",
+        affiliation: {
+          name: "EPFL",
+          website: "https://www.epfl.ch/en/"
+        }
+      },
+      topic: "WHIR: Reed–Solomon Proximity Testing with Super-Fast Verification",
+      topicLink: "https://eprint.iacr.org/2024/1586",
+      date: "Friday, Nov 8, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+      recording: "https://zoom.us/rec/share/q_hqTk82gqREgs-dvNG-ZVPyfLnP7uh-etTvfdDzDUHg0wR-c_6ia1azt6cjwzw4.otu4SBWSnpv3N9Ul?startTime=1731089014000",
+      recordingPassword: "4%tp7S!W",
+      abstract: "We introduce WHIR, a new IOP of proximity that offers small query complexity and exceptionally fast verification time. The WHIR verifier typically runs in a few hundred microseconds, whereas other verifiers in the literature require several milliseconds (if not much more). This significantly improves the state of the art in verifier time for hash-based SNARGs (and beyond).\n\nCrucially, WHIR is an IOP of proximity for constrained Reed–Solomon codes, which can express a rich class of queries to multilinear polynomials and to univariate polynomials. In particular, WHIR serves as a direct replacement for protocols like FRI, STIR, BaseFold, and others. Leveraging the rich queries supported by WHIR and a new compiler for multilinear polynomial IOPs, we obtain a highly efficient SNARG for generalized R1CS.\n\nAs a comparison point, our techniques also yield state-of-the-art constructions of hash-based (non-interactive) polynomial commitment schemes for both univariate and multivariate polynomials (since sumcheck queries naturally express polynomial evaluations). For example, if we use WHIR to construct a polynomial commitment scheme for degree 222, with 100 bits of security, then the time to commit and open is 1.2 seconds, the sender communicates 63 KiB to the receiver, and the opening verification time is 360 microseconds.\n\nReed-Solomon proximity testing is a fundamental primitive in the design of probabilistically checkable proofs (PCPs) and succinct non-interactive arguments (SNARGs). In this work, we introduce WHIR, a novel Reed-Solomon proximity testing protocol that achieves super-fast verification. Our protocol leverages a combination of techniques from coding theory and cryptography to achieve a verification time that scales logarithmically with the degree of the polynomial, a significant improvement over existing methods. We provide a detailed security analysis of WHIR and demonstrate its practical efficiency through extensive benchmarks. Our results show that WHIR can lead to substantial improvements in the verification time of SNARGs based on Reed-Solomon proximity testing, making it a promising building block for future cryptographic protocols."
+    },
+    {
+      speaker: {
         name: "Ron Rothblum",
         personalWebsite: "https://csaws.cs.technion.ac.il/~rothblum/",
         affiliation: {
