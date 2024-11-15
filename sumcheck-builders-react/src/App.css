@@ -5,6 +5,8 @@
   --text-color: #333333;
   --accent-color: #e74c3c;
   --light-gray: #ecf0f1;
+  --gradient-start: #4a90e2;
+  --gradient-end: #357abd;
 }
 
 body {
@@ -12,18 +14,19 @@ body {
   color: var(--text-color);
   font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.8;
+  min-width: 320px;
 }
 
 .App {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 50px 40px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 30px;
-  max-width: 220px;
+  margin: 0 auto 40px;
+  max-width: 280px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -34,32 +37,32 @@ body {
 
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .header-text {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: bold;
   color: var(--secondary-color);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   letter-spacing: 1px;
 }
 
 .tagline {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text-color);
   font-style: italic;
 }
 
 .main-nav {
   background-color: var(--secondary-color);
-  padding: 15px 0;
-  margin-bottom: 40px;
-  border-radius: 8px;
+  padding: 20px 0;
+  margin-bottom: 50px;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,26 +72,28 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
 .main-nav li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 .main-nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
   transition: background-color 0.3s, color 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
 }
 
 .main-nav a i {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .main-nav a:hover,
@@ -99,59 +104,51 @@ body {
 
 .home-container {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
 .main-content {
   flex: 1;
-  padding: 40px;
+  padding: 50px;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-width: 0;
 }
 
 .sidebar {
-  width: 320px;
-  padding: 30px;
+  width: 400px;
+  padding: 40px;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .intro, .telegram-invite, .organizer-words, .group-intro {
-  background-color: #fff;
-  border: 1px solid var(--light-gray);
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 40px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.intro:hover, .telegram-invite:hover, .organizer-words:hover, .group-intro:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
+  margin-bottom: 50px;
 }
 
 h2, h3 {
   color: var(--secondary-color);
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 36px;
   border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 h3 {
   font-size: 24px;
+  margin-bottom: 15px;
 }
 
 .lead {
   font-size: 18px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 a {
@@ -165,14 +162,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.content {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  margin-bottom: 40px;
-}
-
 .talks-list {
   list-style-type: none;
   padding: 0;
@@ -180,24 +169,66 @@ a:hover {
 
 .talk-item {
   border-bottom: 1px solid var(--light-gray);
-  padding: 25px 0;
-  transition: background-color 0.3s ease;
+  padding: 30px 0;
 }
 
 .talk-item:last-child {
   border-bottom: none;
+  padding-bottom: 0;
 }
 
-.talk-item:hover {
-  background-color: var(--background-color);
+.talk-item:first-child {
+  padding-top: 0;
 }
 
 .talk-item h3 {
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .talk-item p {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.talk-item .date {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.talk-item .topic {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.talk-item .recording,
+.talk-item .slides {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recording-link,
+.slides a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.recording-link:hover,
+.slides a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.recording-password {
+  color: var(--text-color);
+  font-size: 14px;
 }
 
 .btn {
@@ -205,29 +236,107 @@ a:hover {
   background-color: var(--primary-color);
   color: #fff;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 15px;
+  margin: 5px;
 }
 
 .btn:hover {
   background-color: var(--primary-color);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+.zoom-invite {
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zoom-invite span {
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.talk-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.bio-btn,
+.abstract-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.1);
+  margin-right: 10px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-btn:hover,
+.abstract-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
+.bio-btn:active,
+.abstract-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.1);
+}
+
+.bio-btn::before,
+.abstract-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bio-btn:hover::before,
+.abstract-btn:hover::before {
+  opacity: 1;
 }
 
 .site-footer {
   background-color: var(--secondary-color);
   color: #fff;
-  padding: 30px 0; /* Increased padding */
-  margin-top: 60px;
+  padding: 40px 0;
+  margin-top: 80px;
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -243,9 +352,9 @@ a:hover {
 }
 
 .footer-logo {
-  max-width: 150px;
+  max-width: 180px;
   height: auto;
-  filter: brightness(0) invert(1); /* This will make the logo white for better contrast */
+  filter: brightness(0) invert(1);
 }
 
 .footer-right {
@@ -255,20 +364,35 @@ a:hover {
 .footer-nav {
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 30px;
 }
 
 .footer-nav a {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 16px;
 }
 
 .footer-nav a:hover {
   color: var(--accent-color);
 }
 
+@media (max-width: 1366px) {
+  .App {
+    max-width: 1200px;
+  }
+  
+  .sidebar {
+    width: 350px;
+  }
+}
+
 @media (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
   .home-container {
     flex-direction: column;
   }
@@ -278,24 +402,26 @@ a:hover {
   }
 
   .title {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .main-nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
   }
 
   .main-nav li {
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
   }
 
   .footer-content {
@@ -310,9 +436,31 @@ a:hover {
 
   .footer-nav {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .footer-logo {
     margin-bottom: 20px;
+  }
+
+  .main-content, .sidebar {
+    padding: 30px;
+  }
+
+  .zoom-invite {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .talk-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bio-btn,
+  .abstract-btn {
+    width: 100%;
+    margin-right: 0;
   }
 }

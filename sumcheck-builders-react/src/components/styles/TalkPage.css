@@ -1,0 +1,130 @@
+.talk-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.talk-header {
+  margin-bottom: 40px;
+}
+
+.talk-header h1 {
+  font-size: 32px;
+  color: var(--secondary-color);
+  margin: 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.talk-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.talk-main {
+  padding-right: 40px;
+  border-right: 1px solid var(--light-gray);
+}
+
+.speakers {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.date-time {
+  margin-bottom: 30px;
+}
+
+.date-time h3,
+.abstract h3,
+.metadata-section h3 {
+  font-size: 20px;
+  color: var(--secondary-color);
+  margin: 0 0 15px 0;
+}
+
+.abstract p,
+.metadata-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.talk-metadata {
+  padding-left: 0;
+}
+
+.metadata-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+}
+
+.metadata-section:last-child {
+  margin-bottom: 0;
+}
+
+.metadata-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.metadata-section li {
+  margin-bottom: 10px;
+}
+
+.metadata-section li:last-child {
+  margin-bottom: 0;
+}
+
+.metadata-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.metadata-section a:hover {
+  color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+  .talk-content {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-main {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 40px;
+  }
+
+  .talk-metadata {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .talk-page {
+    padding: 20px;
+  }
+
+  .talk-header h1 {
+    font-size: 28px;
+  }
+
+  .speakers {
+    font-size: 18px;
+  }
+}
