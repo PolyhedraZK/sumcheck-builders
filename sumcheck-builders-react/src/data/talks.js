@@ -28,6 +28,20 @@ export const upcomingTalks = [
     topic: "Khatam : Proximity Gaps For Multilinear Polynomial Commitments",
     topicLink: "#",
     date: "Friday, Dec 13, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+  },
+  {
+    id: "Ceno",
+    speaker: {
+      name: "Tianyi Liu",
+      personalWebsite: "https://liutianyi.site/",
+      affiliation: {
+        name: "UIUC",
+        website: "#"
+      }
+    },
+    topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual",
+    topicLink: "https://eprint.iacr.org/2024/387.pdf",
+    date: "Thursday, Dec 16, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
   }
 ];
 
