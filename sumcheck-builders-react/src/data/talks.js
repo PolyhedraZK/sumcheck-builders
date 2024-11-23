@@ -1,21 +1,5 @@
 export const upcomingTalks = [
   {
-    id: "10x-faster-sumcheck-2024",
-    speaker: {
-      name: "Suyash Bagad",
-      personalWebsite: "https://www.ingonyama.com/authors/suyash-bagad",
-      affiliation: {
-        name: "Ingonyama",
-        website: "https://www.ingonyama.com/"
-      }
-    },
-    topic: "10x Faster Sumcheck - A breakthrough for sumcheck over binary tower fields",
-    topicLink: "#",
-    date: "Friday, Nov 22, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
-    bio: "Suyash is a researcher at Ingonyama, working on algorithms to accelerate proof generation. He previously was a cryptography engineer at Aztec.",
-    abstract: "Sumcheck has become the new bottleneck for a SNARK prover when working over towers of Binary fields, especially with the emergence of fast commitment schemes like Binius. We devise a novel algorithm based on the Toom-Cook multiplication technique to accelerate the sumcheck prover by atleast an order of magnitude.\n\nIn this talk, we will dive into the details of our algorithm and discuss some encouraging results with our implementation. Our techniques also apply to the sumcheck more generally in case when the witness magnitude is \"small\"."
-  },
-  {
     id: "Khatam",
     speaker: {
       name: "Hadas Zeilberger",
@@ -47,6 +31,24 @@ export const upcomingTalks = [
 
 export const pastTalks = [
   {
+    id: "10x-faster-sumcheck-2024",
+    speaker: {
+      name: "Suyash Bagad",
+      personalWebsite: "https://www.ingonyama.com/authors/suyash-bagad",
+      affiliation: {
+        name: "Ingonyama",
+        website: "https://www.ingonyama.com/"
+      }
+    },
+    topic: "10x Faster Sumcheck - A breakthrough for sumcheck over binary tower fields",
+    topicLink: "https://ingonyama.slides.com/suyash67/10x-faster-sumcheck-over-binary-tower-fields/fullscreen",
+    date: "Friday, Nov 22, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+    bio: "Suyash is a researcher at Ingonyama, working on algorithms to accelerate proof generation. He previously was a cryptography engineer at Aztec.",
+    recording: "https://zoom.us/rec/share/0t-jmB8YWE-F_ILHno4FVPFBFozRAc8jLjN3WdWu75QLy1_vhsMe4dT6i7SdqYf8.vLF1y3wcQHHIM61s?startTime=1732298663000",
+    recordingPassword: "bSY70A%z",
+    abstract: "Sumcheck has become the new bottleneck for a SNARK prover when working over towers of Binary fields, especially with the emergence of fast commitment schemes like Binius. We devise a novel algorithm based on the Toom-Cook multiplication technique to accelerate the sumcheck prover by atleast an order of magnitude.\n\nIn this talk, we will dive into the details of our algorithm and discuss some encouraging results with our implementation. Our techniques also apply to the sumcheck more generally in case when the witness magnitude is \"small\"."
+  },
+  {
     id: "pari-and-garuda-2024",
     speaker: {
       name: "Alireza Shirzad",
@@ -60,6 +62,8 @@ export const pastTalks = [
     topicLink: "https://eprint.iacr.org/2024/1245",
     date: "Thursday, Nov 14, 11:00 AM PST / 2:00 PM EST / 8:00 PM CET",
     bio: "Alireza Shirzad is a first-year PhD student at Penn advised by Dr. Pratyush Mishra. He is primarily interested in designing proof systems and SNARKs. Before coming to Penn, He obtained his Master's degree in Secure communications and Cryptography in 2023 and a bachelor's degree in Electrical Engineering in 2021 from Sharif University of Technology.",
+    recording: "https://zoom.us/rec/share/n2ZGZ0A3srcvEZesR8NV5K9_veatDqas117ZS-02lTnHj03nijVK__HdFvwqJYUd.h7TRNBQjSQ-ERIm6?startTime=1731611077000",
+    recordingPassword: "9pu*QhQ&",
     abstract: "SNARKs are powerful cryptographic primitives that allow a prover to produce a succinct proof of a computation. Two key goals of SNARK research are to minimize the size of the proof and to minimize the time required to generate the proof. In this work, we present new SNARK constructions that push the frontier on both of these goals.\n\nOur first construction, Pari, is a SNARK that achieves the smallest proof size amongst *all* known SNARKs. Specifically, Pari achieves a proof size of just two group elements and two field elements, which, when instantiated with the BLS12-381 curve, totals just 160 bytes, smaller than that of Groth16 [Groth, EUROCRYPT '16] and Polymath [Lipmaa, CRYPTO '24].\n\nOur second construction, Garuda, is a SNARK that reduces proof generation time by supporting, for the first time, arbitrary \"custom\" gates and *free* linear gates. To demonstrate Garuda's performance, we implement and evaluate it, and show that it provides significant prover-time savings compared to both the state-of-the-art SNARKs (Groth16 and HyperPlonk [EUROCRYPT '22])\n\nBoth constructions rely on a new cryptographic primitive: \"equifficient\" polynomial commitment schemes that enforce that committed polynomials have the same representation in particular bases. We provide both rigorous security definitions for this primitive as well as efficient constructions for univariate and multilinear polynomials."
   },
   {
