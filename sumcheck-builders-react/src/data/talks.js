@@ -23,7 +23,7 @@ export const upcomingTalks = [
         website: "#"
       }
     },
-    topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual",
+    topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine",
     topicLink: "https://eprint.iacr.org/2024/387.pdf",
     date: "Thursday, Dec 19, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
   }
