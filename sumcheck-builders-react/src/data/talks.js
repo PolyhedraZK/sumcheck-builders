@@ -1,4 +1,19 @@
 export const upcomingTalks = [
+
+  {
+    id: "zkml",
+    speaker: {
+      name: "Tiancheng Xie",
+      personalWebsite: "https://niconiconi.github.io/en_index.html",
+      affiliation: {
+        name: "Polyhedra",
+        website: "https://https://www.polyhedra.network/"
+      }
+    },
+    topic: "zkPyTorch: Proving Llama-3 8B within minutes (tentitive)",
+    topicLink: "https://x.com/Tiancheng_Xie/status/1861152632334630968",
+    date: "Friday, Dec 6, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+  },
   {
     id: "Khatam",
     speaker: {
