@@ -7,7 +7,7 @@ export const upcomingTalks = [
       personalWebsite: "https://niconiconi.github.io/en_index.html",
       affiliation: {
         name: "Polyhedra",
-        website: "https://https://www.polyhedra.network/"
+        website: "https://www.polyhedra.network/"
       }
     },
     topic: "zkPyTorch: Proving Llama-3 8B within minutes (tentitive)",
