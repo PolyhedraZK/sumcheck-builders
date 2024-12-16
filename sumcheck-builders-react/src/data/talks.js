@@ -1,19 +1,4 @@
 export const upcomingTalks = [
-
-  {
-    id: "Khatam",
-    speaker: {
-      name: "Hadas Zeilberger",
-      personalWebsite: "https://www.hadasze.me/",
-      affiliation: {
-        name: "Yale",
-        website: "https://sites.google.com/view/yacl"
-      }
-    },
-    topic: "Khatam : Proximity Gaps For Multilinear Polynomial Commitments",
-    topicLink: "#",
-    date: "Friday, Dec 13, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
-  },
   {
     id: "Ceno",
     speaker: {
@@ -31,6 +16,22 @@ export const upcomingTalks = [
 ];
 
 export const pastTalks = [
+  {
+    id: "Khatam",
+    speaker: {
+      name: "Hadas Zeilberger",
+      personalWebsite: "https://www.hadasze.me/",
+      affiliation: {
+        name: "Yale",
+        website: "https://sites.google.com/view/yacl"
+      }
+    },
+    topic: "Khatam : Proximity Gaps For Multilinear Polynomial Commitments",
+    topicLink: "#",
+    date: "Friday, Dec 13, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+    recording: "https://zoom.us/rec/share/b3iIaI5CE2wJjviQJ8owQtNdsU2w6VTk-SrYTwpwPsz4vQ_xIReC515iPw5g_t0t.Xn7MbQ1RLRATYqIX",
+    recordingPassword: "6c3^%prw",
+  },
   {
     id: "zkml",
     speaker: {
