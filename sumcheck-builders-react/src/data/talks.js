@@ -12,6 +12,20 @@ export const upcomingTalks = [
     topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine",
     topicLink: "https://eprint.iacr.org/2024/387.pdf",
     date: "Thursday, Dec 19, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+  },
+  {
+    id: "zkfhe",
+    speaker: {
+      name: "Fengrun Liu",
+      personalWebsite: "",
+      affiliation: {
+        name: "Primus Labs",
+        website: "https://primuslabs.xyz/"
+      }
+    },
+    topic: "HasteBoots: Proving FHE Bootstrapping in Seconds",
+    topicLink: "",
+    date: "Friday, Jan 10, 02:00 PM PST / 05:00 PM EST / 11:00 PM CET",
   }
 ];
 
