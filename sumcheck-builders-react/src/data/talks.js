@@ -1,19 +1,5 @@
 export const upcomingTalks = [
   {
-    id: "Ceno",
-    speaker: {
-      name: "Tianyi Liu",
-      personalWebsite: "https://liutianyi.site/",
-      affiliation: {
-        name: "UIUC",
-        website: "#"
-      }
-    },
-    topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine",
-    topicLink: "https://eprint.iacr.org/2024/387.pdf",
-    date: "Thursday, Dec 19, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
-  },
-  {
     id: "zkfhe",
     speaker: {
       name: "Fengrun Liu",
@@ -30,6 +16,22 @@ export const upcomingTalks = [
 ];
 
 export const pastTalks = [
+  {
+    id: "Ceno",
+    speaker: {
+      name: "Tianyi Liu",
+      personalWebsite: "https://liutianyi.site/",
+      affiliation: {
+        name: "UIUC",
+        website: "#"
+      }
+    },
+    topic: "Ceno: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine",
+    topicLink: "https://eprint.iacr.org/2024/387.pdf",
+    date: "Thursday, Dec 19, 10:00 AM PST / 1:00 PM EST / 7:00 PM CET",
+    recording: "https://zoom.us/rec/share/GCe2oEwBz_dWS2KUMPbvwwZo2kN3517UqG2SMsMBF_MuVwU0_vd5PDnkjgP7M3GA.1OBWLEhS1hPvney9",
+    recordingPassword: "j^dZe7xT",
+  },
   {
     id: "Khatam",
     speaker: {
