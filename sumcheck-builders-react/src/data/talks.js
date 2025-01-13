@@ -1,4 +1,8 @@
 export const upcomingTalks = [
+  
+];
+
+export const pastTalks = [
   {
     id: "zkfhe",
     speaker: {
@@ -12,10 +16,9 @@ export const upcomingTalks = [
     topic: "HasteBoots: Proving FHE Bootstrapping in Seconds",
     topicLink: "",
     date: "Friday, Jan 10, 02:00 PM PST / 05:00 PM EST / 11:00 PM CET",
-  }
-];
-
-export const pastTalks = [
+    recording: "https://zoom.us/rec/share/huwOKOKQr7zRyQnrwKXk1lhxEfgL2PRi8HIaPX4wB7-6EuE8bpy8SHED7cYgaNaN.XRezgovwQNh3QiUe",
+    recordingPassword: "@u61w1Y@",
+  },
   {
     id: "Ceno",
     speaker: {
