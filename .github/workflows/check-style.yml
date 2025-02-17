@@ -27,6 +27,4 @@ jobs:
         INPUT_API_KEY: '${{ secrets.CHECK_STYLE_API_KEY }}'
         INPUT_MODEL: 'deepseek/deepseek-chat'
         INPUT_REPO_PATH: '${{ github.workspace }}'
-        INPUT_STYLE: 'javascript'
-        INPUT_LANGUAGE: 'javascript'
       run: bash ./checker.sh
