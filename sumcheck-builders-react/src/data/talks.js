@@ -1,5 +1,42 @@
 export const upcomingTalks = [
-  
+  {
+    id: "mercury-multilinear-pcs",
+    speaker: {
+      name: "Liam Eagen",
+      affiliation: {
+        name: "Alpen Labs",
+        website: "#"
+      }
+    },
+    topic: "MERCURY: A multilinear Polynomial Commitment Scheme with constant proof size and no prover FFTs",
+    topicLink: "https://eprint.iacr.org/2024/1066",
+    date: "Friday, April 11, 11:00 AM ET"
+  },
+  {
+    id: "veritas-image-transformations",
+    speaker: {
+      name: "Binyi Chen",
+      affiliation: {
+        name: "Stanford",
+        website: "#"
+      }
+    },
+    topic: "VerITAS: Verifying Image Transformations at Scale",
+    date: "Thursday, April 17, 1:00 PM ET"
+  },
+  {
+    id: "gpu-gkr-acceleration",
+    speaker: {
+      name: "Simon Lau",
+      affiliation: {
+        name: "Polyhedra Network",
+        website: "https://www.polyhedra.network/"
+      }
+    },
+    topic: "New result on GPU accelerating GKR",
+    topicLink: "https://eprint.iacr.org/2024/1066",
+    date: "Friday, April 25, 1:00 PM ET"
+  }
 ];
 
 export const pastTalks = [
