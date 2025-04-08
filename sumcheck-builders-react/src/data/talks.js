@@ -9,7 +9,7 @@ export const upcomingTalks = [
       }
     },
     topic: "MERCURY: A multilinear Polynomial Commitment Scheme with constant proof size and no prover FFTs",
-    topicLink: "https://eprint.iacr.org/2024/1066",
+    topicLink: "https://eprint.iacr.org/2025/385",
     date: "Friday, April 11, 11:00 AM ET"
   },
   {
@@ -22,6 +22,7 @@ export const upcomingTalks = [
       }
     },
     topic: "VerITAS: Verifying Image Transformations at Scale",
+    topicLink: "https://eprint.iacr.org/2024/1066",
     date: "Thursday, April 17, 1:00 PM ET"
   },
   {
