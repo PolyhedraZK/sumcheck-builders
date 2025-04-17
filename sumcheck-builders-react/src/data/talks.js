@@ -1,18 +1,5 @@
 export const upcomingTalks = [
   {
-    id: "mercury-multilinear-pcs",
-    speaker: {
-      name: "Liam Eagen",
-      affiliation: {
-        name: "Alpen Labs",
-        website: "#"
-      }
-    },
-    topic: "MERCURY: A multilinear Polynomial Commitment Scheme with constant proof size and no prover FFTs",
-    topicLink: "https://eprint.iacr.org/2025/385",
-    date: "Friday, April 11, 11:00 AM ET"
-  },
-  {
     id: "veritas-image-transformations",
     speaker: {
       name: "Binyi Chen",
@@ -41,6 +28,21 @@ export const upcomingTalks = [
 ];
 
 export const pastTalks = [
+  {
+    id: "mercury-multilinear-pcs",
+    speaker: {
+      name: "Liam Eagen",
+      affiliation: {
+        name: "Alpen Labs",
+        website: "#"
+      }
+    },
+    topic: "MERCURY: A multilinear Polynomial Commitment Scheme with constant proof size and no prover FFTs",
+    topicLink: "https://eprint.iacr.org/2025/385",
+    date: "Friday, April 11, 11:00 AM ET",
+    recording: "https://zoom.us/rec/share/U5Bj6EIZX_G9j21vnbQ0Qka-MTshpgXLuVVWNOHeX5TbJY0RxKyNAxjlR_a3Py6a.Vdor_p81qLWE5BLr",
+    recordingPassword: "!D4.6IZ^",
+  },
   {
     id: "zkfhe",
     speaker: {
