@@ -1,4 +1,22 @@
 export const upcomingTalks = [
+  
+];
+
+export const pastTalks = [
+  {
+    id: "gpu-gkr-acceleration",
+    speaker: {
+      name: "Simon Lau",
+      affiliation: {
+        name: "Polyhedra Network",
+        website: "https://www.polyhedra.network/"
+      }
+    },
+    topic: "New result on GPU accelerating GKR",
+    date: "Friday, April 25, 1:00 PM ET",
+    recording: "https://zoom.us/rec/share/AZ6ORE5vlDSbaLDdexxSOsfwwO2FacBs_xakWgt0unrijBu313Gx7oOujpqttkoo.UlGGcd91WzLbyG5I",
+    recordingPassword: "30ng1^ig",
+  },
   {
     id: "veritas-image-transformations",
     speaker: {
@@ -10,24 +28,10 @@ export const upcomingTalks = [
     },
     topic: "VerITAS: Verifying Image Transformations at Scale",
     topicLink: "https://eprint.iacr.org/2024/1066",
-    date: "Thursday, April 17, 1:00 PM ET"
+    date: "Thursday, April 17, 1:00 PM ET",
+    recording: "https://zoom.us/rec/share/Xsn7b_Hqjq9C1lK0GjD8zyLwHX0mFU6ZLnW-xYmtVN0VntYdAI1a6LX1ciKHnEgI.4wmcKEjaRCshbJy-",
+    recordingPassword: "a=n24kzV",
   },
-  {
-    id: "gpu-gkr-acceleration",
-    speaker: {
-      name: "Simon Lau",
-      affiliation: {
-        name: "Polyhedra Network",
-        website: "https://www.polyhedra.network/"
-      }
-    },
-    topic: "New result on GPU accelerating GKR",
-    topicLink: "https://eprint.iacr.org/2024/1066",
-    date: "Friday, April 25, 1:00 PM ET"
-  }
-];
-
-export const pastTalks = [
   {
     id: "mercury-multilinear-pcs",
     speaker: {
